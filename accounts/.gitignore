@@ -1,0 +1,10 @@
+.env
+
+node_modules/
+
+package-lock.sql
+
+commands.sql
+
+
+API_TEST/
