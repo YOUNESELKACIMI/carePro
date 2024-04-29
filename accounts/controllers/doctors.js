@@ -41,6 +41,8 @@ const addDoctorToUser = async (req, res) => {
     await user.addDoctor(foundDoctor);
     return res.json(foundDoctor);
   }
+
+  return res.status(400).json({ error: "Doctor not found" });
 };
 
 const registerDoctor = async (req, res) => {
