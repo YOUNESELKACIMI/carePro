@@ -1,5 +1,11 @@
+import useAuth from "./hooks/useContext";
+import { IcurrentUser} from "./types/types";
+
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const { currentUser }: IcurrentUser = useAuth();
+
+  console.log(currentUser)
+  return <div>Welcome back, {currentUser?.name}</div>;
 };
 
 export default App;
