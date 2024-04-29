@@ -7,7 +7,7 @@ const {
   registerDoctor,
   deleteDoctor
 } = require("../controllers/doctors");
-const tokenExtractor = require("../middlewares/tokenExtractor");
+const {tokenExtractor} = require("../middlewares/tokenExtractor");
 
 router.get("/", getDoctors);
 router.get("/:id", getDoctor);
