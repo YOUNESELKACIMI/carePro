@@ -5,6 +5,7 @@ const {
   getDoctor,
   addDoctorToUser,
   registerDoctor,
+  deleteDoctor
 } = require("../controllers/doctors");
 const tokenExtractor = require("../middlewares/tokenExtractor");
 
