@@ -12,6 +12,8 @@ app.use(express.json());
 app.use("/api/users", require("./routes/users"));
 app.use("/api/login", require("./routes/login"));
 app.use("/api/doctors", require("./routes/doctors"));
+app.use("/api/forgot-password",require("./routes/forgotPassword"))
+app.use("/api/reset-password",require('./routes/resetPassword'))
 
 app.get(
   "/api",

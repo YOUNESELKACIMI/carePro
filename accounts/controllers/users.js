@@ -8,6 +8,9 @@ const getUsers = async (req, res) => {
       attributes: ["id", "name", "email", "phoneNumber", "locality"],
       through: { attributes: [] }, // To exclude the join table attributes
     },
+    attributes:{
+      exclude:["passwordHash","resetPasswordToken","resetPasswordExpires"]
+    }
   });
   res.json(users);
 };
@@ -19,6 +22,9 @@ const getUser = async (req, res) => {
       attributes: ["id", "name", "email", "phoneNumber", "locality"],
       through: { attributes: [] }, // To exclude the join table attributes
     },
+    attributes:{
+      exclude:["passwordHash","resetPasswordToken","resetPasswordExpires"]
+    }
   });
   res.json(user);
 };
