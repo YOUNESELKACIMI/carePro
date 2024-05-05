@@ -7,6 +7,7 @@ import { AuthContextProvider } from "./context/authContext.tsx";
 import AuthorizationProvider from "./providers/AuthorizationProvider.tsx";
 import Register from "./views/Register.tsx";
 import "react-toastify/dist/ReactToastify.css";
+import Chat from "./views/Chat.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,14 @@ const router = createBrowserRouter([
     element: (
       <AuthorizationProvider>
         <App />
+      </AuthorizationProvider>
+    ),
+  },
+  {
+    path : "/chat",
+    element: (
+      <AuthorizationProvider>
+        <Chat/>
       </AuthorizationProvider>
     ),
   },

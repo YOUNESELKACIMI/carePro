@@ -12,7 +12,6 @@ const register = async (data) => {
 };
 
 const verifyToken = async (token) => {
-  console.log(token);
   try {
     const res = await axios.get("/api", {
       headers: {
