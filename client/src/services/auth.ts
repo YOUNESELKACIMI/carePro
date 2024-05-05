@@ -6,6 +6,11 @@ const login = async (data: Idata) => {
   return res.data;
 };
 
+const register = async (data) => {
+  const res = await axios.post("/api/users/register", data);
+  return res.data;
+};
+
 const verifyToken = async (token) => {
   console.log(token);
   try {
@@ -24,6 +29,6 @@ const verifyToken = async (token) => {
   }
 };
 
-const authServices = { login, verifyToken };
+const authServices = { login, verifyToken, register };
 
 export default authServices;

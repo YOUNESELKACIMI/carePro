@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./views/Login.tsx";
 import { AuthContextProvider } from "./context/authContext.tsx";
 import AuthorizationProvider from "./providers/AuthorizationProvider.tsx";
+import Register from "./views/Register.tsx";
+import "react-toastify/dist/ReactToastify.css";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 
