@@ -1,13 +1,18 @@
-const { User, Doctor } = require("../models/index");
+const { User, Doctor,ChatHistory } = require("../models/index");
 const bcrypt = require("bcrypt");
 
 const getUsers = async (req, res) => {
   const users = await User.findAll({
-    include: {
+    include:[{
       model: Doctor,
       attributes: ["id", "name", "email", "phoneNumber", "locality"],
       through: { attributes: [] }, // To exclude the join table attributes
     },
+    {
+      model:ChatHistory,
+      attributes:["role","content","id"]
+    }
+  ],
     attributes:{
       exclude:["passwordHash","resetPasswordToken","resetPasswordExpires"]
     }
