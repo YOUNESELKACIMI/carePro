@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import userServices from "../services/user";
+import useAuth from "../hooks/useContext";
 const MapWithDoctors = ({ coordinates }) => {
   const [map, setMap] = useState(null);
   const [placesService, setPlacesService] = useState(null);
+  const {token} = useAuth();
 
   useEffect(() => {
     // Load Google Maps API script
@@ -119,16 +122,14 @@ const MapWithDoctors = ({ coordinates }) => {
       );
       addButton.addEventListener("click", async () => {
         try {
-          const response = await fetch("api/users/addDoctor", {
-            method: "POST",
-            // Add any necessary headers here
-            // body: JSON.stringify({ placeId: place.place_id }), // Optionally send any data with the request
-          });
-          if (response.ok) {
-            toast.success("Doctor added successfully");
-          } else {
-            toast.error("Failed to add doctor");
-          }
+          const doctor = {
+            name: place.name,
+            place_id: place.place_id,
+            locality: place.vicinity,
+          };
+          const res = await userServices.addDoctor(doctor, token);
+          console.log(res);
+          toast.success("Doctor added successfully");
         } catch (error) {
           console.error("Error:", error);
           toast.error("An error occurred while adding the doctor");
@@ -139,11 +140,7 @@ const MapWithDoctors = ({ coordinates }) => {
       infowindow.setContent(content);
       infowindow.open(map, marker);
 
-      console.log({
-        name: place.name,
-        placeId: place.place_id,
-        address: place.vicinity,
-      });
+      console.log({});
     });
   };
 
