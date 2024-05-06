@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MapWithDoctors from "./components/MapWithDoctors";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const [userLocation, setUserLocation] = useState(null);
@@ -27,16 +29,20 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>Error: {error}</p>
-      ) : userLocation ? (
-        <MapWithDoctors coordinates={userLocation} />
-      ) : (
-        <p>No location available</p>
-      )}
+    <div className="flex">
+      <Sidebar activePage={"map"} />
+      <div className="flex flex-col w-full">
+        <Navbar />
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : userLocation ? (
+          <MapWithDoctors coordinates={userLocation} />
+        ) : (
+          <p>No location available</p>
+        )}
+      </div>
     </div>
   );
 };

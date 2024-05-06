@@ -2,14 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.btn{
-
-    @apply bg-white text-black py-2 px-4 rounded border-2;
+.btn {
+  @apply bg-palette1 text-white p-2 rounded;
 }
-.myinput
-{
-
-    @apply border-b-2;
-    outline : none;
+.myinput {
+  @apply border-b-2;
+  outline: none;
 }
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: 1s cubic-bezier(0.36, -0.01, 0, 0.77);
+}
+.sidebar.closed {
+  margin-left: -240px;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  color: black;
+}
+
+.isactive {
+  @apply bg-palette3;
+}
+
+
