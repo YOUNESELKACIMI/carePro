@@ -4,7 +4,7 @@ const getDoctors = async (req, res) => {
   const doctors = await Doctor.findAll({
     include: {
       model: User,
-      attributes: ["id", "name", "locality", "place_id"],
+      attributes: ["id", "name", "email"],
       through: { attributes: [] }, // To exclude the join table attributes
     },
   });
@@ -16,7 +16,7 @@ const getDoctor = async (req, res) => {
     include: {
       model: User,
 
-      attributes: ["id", "name", "locality", "place_id"],
+      attributes: ["id", "name", "email"],
       through: { attributes: [] }, // To exclude the join table attributes
     },
   });
