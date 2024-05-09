@@ -16,6 +16,16 @@ services:
     networks:
       - CAREPRO_NETWORK
 
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.13-management
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - CAREPRO_NETWORK
+
   app:
     container_name: main_api
     depends_on:
