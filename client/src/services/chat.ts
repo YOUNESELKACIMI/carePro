@@ -4,7 +4,7 @@ const sendMessage = async (message, token) => {
   const data = {
     message,
   };
-  const res = await axios.post("/api/chat", data, {
+  const res = await axios.post("http://localhost:5000/api/chat", data, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
