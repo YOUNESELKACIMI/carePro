@@ -38,12 +38,11 @@ app.get("/api/validate_token", tokenExtractor, (req, res) => {
 });
 app.listen(port, async () => {
   console.log(`Server running on port ${port}`);
+  consumeMessages()
+    .then(() => console.log("Message consumer started"))
+    .catch((error) => console.error("Error starting message consumer:", error));
   await sequelize.authenticate();
   console.log("Database connected!");
   await sequelize.sync({ alter: true }); // Synchronize all models
   console.log("All models were synchronized successfully.");
-  consumeMessages()
-    .then(() => console.log("Message consumer started"))
-    .catch((error) => console.error("Error starting message consumer:", error));
 });
-
