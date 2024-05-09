@@ -56,11 +56,8 @@ const Login = () => {
           <button type="submit" className="btn w-full sign-in-btn">
             Sign In
           </button>
-          <Link
-            to={`/forgotpassword`}
-            className="small font-bold text-palette3"
-          >
-            Forgot password?
+          <Link to="/register" className="text-blue-500">
+            No account yet? Register
           </Link>
         </div>
         {err && <div className="text-red-500">{err}</div>}

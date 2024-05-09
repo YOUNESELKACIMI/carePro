@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useRegister } from "../hooks/useRegister";
 import useAuth from "../hooks/useContext";
 import { Iparam } from "../types/types";
@@ -94,6 +94,9 @@ const Register = () => {
             Sign In
           </button>
         </div>
+        <Link to="/login" className="text-blue-500">
+          Already have an account? Login
+        </Link>
         {err && <div className="text-red-500">{err}</div>}
       </form>
     </div>

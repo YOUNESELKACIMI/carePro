@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import chatServices from "../services/chat";
 import useAuth from "../hooks/useContext";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import userServices from "../services/user";
 
 interface IMessage {
   role: string;
@@ -11,9 +12,18 @@ interface IMessage {
 
 const Chat = () => {
   const { token } = useAuth();
-  const [messages, setMessages] = useState<Array<IMessage>>([]);
+  const [messages, setMessages] = useState<Array<IMessage> | null>(null);
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(false); // State to track loading
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await userServices.getMyProfile(token);
+      console.log(user.chatHistories);
+      setMessages(user.chatHistories);
+    };
+    fetchUser();
+  }, []);
 
   const handleChat = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,24 +54,28 @@ const Chat = () => {
       <div className="flex flex-col h-screen w-full">
         <Navbar />
         <div className="messages flex-1 p-4 overflow-y-auto">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`${
-                message.role === "user" ? "justify-end" : "justify-start"
-              } flex`}
-            >
+          {messages && messages.length === 0 && (
+            <div className="text-center text-4xl text-palette3 mt-32">How can I help you today?</div>
+          )}
+          {messages &&
+            messages.map((message, index) => (
               <div
+                key={index}
                 className={`${
-                  message.role === "user"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200"
-                } rounded-lg p-2 max-w-xs break-words mb-2`}
+                  message.role === "user" ? "justify-end" : "justify-start"
+                } flex`}
               >
-                {message.content}
+                <div
+                  className={`${
+                    message.role === "user"
+                      ? "bg-palette3 text-white"
+                      : "bg-gray-200"
+                  } rounded-lg p-2 max-w-xs break-words mb-2`}
+                >
+                  {message.content}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
           {loading && ( // Show loading spinner if loading is true
             <div className="flex justify-center mt-2">
               <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-b-2 border-gray-900"></div>
