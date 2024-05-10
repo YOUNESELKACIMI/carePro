@@ -4,6 +4,11 @@
 
 ![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/15a7ee5b-c1b7-4118-b697-836ae139e57a)
 
+## Project Architecture
+
+![architecture](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/86e92e5a-3f32-4ed2-b7b0-1f230c68a377)
+
+
 ## Prerequisites
 
 - Node.js and Docker
