@@ -1,0 +1,15 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 9999:9999
+    container_name: 
+      carepro-chatbot
+    networks:
+      - CAREPRO_NETWORK
+    volumes:
+      - .:/app  # Bind mount the current directory into the container's /app directory
+networks:
+  CAREPRO_NETWORK:
+    external: true

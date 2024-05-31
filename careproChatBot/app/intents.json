@@ -1,0 +1,704 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Whats up"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I do for you?",
+        "Hello! How can I help you today?",
+        "Hi! What can I assist you with today?"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "what is your name",
+        "what should I call you",
+        "whats your name?",
+        "who are you?",
+        "who",
+        "what are you?",
+        "identify yourself",
+        "identify",
+        "identity",
+        "tell me about you",
+        "tell me about yourself"
+      ],
+      "responses": [
+        "You can call me your virtual assistant, CAREPRO, developped by LASSIRY Yassir, ELKACIMI Younes, BASRAOUI Younes and KAMIL Ali",
+        "I'm your virtual assistant CAREPRO, developped by LASSIRY Yassir, ELKACIMI Younes, BASRAOUI Younes and KAMIL Ali. How can I help you today?",
+        "I'm your assistant bot CAREPRO, developped by LASSIRY Yassir, ELKACIMI Younes, BASRAOUI Younes and KAMIL Ali, here to help you with any information you need."
+      ]
+    },
+    {
+      "tag": "problem_solving",
+      "patterns": [
+        "i need help",
+        "help me",
+        "tell me",
+        "i have some problem",
+        "problem",
+        "can you help me?"
+      ],
+      "responses": [
+        "Yes, I can help you. Please tell me more about your problem.",
+        "I'm here to assist you. What seems to be the issue?",
+        "Sure, I'm here to help. Please provide me with more details.",
+        "I'd be happy to help. What do you need assistance with?"
+      ]
+    },
+    {
+      "tag": "jaundice",
+      "patterns": [
+        "yellow skin",
+        "yellowish white part of eye",
+        "itching of the skin",
+        "light colored stools",
+        "dark colored urine"
+      ],
+      "responses": [
+        "You might be suffering from jaundice. It's important to see a healthcare provider for proper diagnosis and treatment. Jaundice can indicate liver issues or other underlying conditions."
+      ]
+    },
+    {
+      "tag": "emotional_problems",
+      "patterns": [
+        "anxiety",
+        "depression fatigue",
+        "feeling tense",
+        "flashbacks and nightmares",
+        "disinterest in regular activities",
+        "suicidal thoughts",
+        "hallucinations",
+        "delusions"
+      ],
+      "responses": [
+        "You might be experiencing emotional problems. It's important to talk to a mental health professional who can provide support and treatment options. Don't hesitate to reach out to friends and family for support as well."
+      ]
+    },
+    {
+      "tag": "headache_problems",
+      "patterns": ["dizziness", "nausea", "vomiting", "inability to walk"],
+      "responses": [
+        "You might be suffering from severe headache issues or migraines. It's recommended to consult a healthcare provider to identify the cause and get appropriate treatment. Staying hydrated and managing stress can also help."
+      ]
+    },
+    {
+      "tag": "appendicitis",
+      "patterns": [
+        "feeling sick (nausea)",
+        "being sick",
+        "loss of appetite",
+        "diarrhoea",
+        "a high temperature (fever) and a flushed face"
+      ],
+      "responses": [
+        "You might be suffering from appendicitis. This is a medical emergency, and you should seek immediate medical attention if you suspect you have appendicitis."
+      ]
+    },
+    {
+      "tag": "allergy",
+      "patterns": [
+        "sneezing and an itchy, runny or blocked nose",
+        "itchy, red, watering eyes",
+        "wheezing, chest tightness, shortness of breath and a cough",
+        "a raised, itchy, red rash (hives)",
+        "swollen lips, tongue, eyes or face",
+        "tummy pain, feeling sick, vomiting or diarrhoea",
+        "dry, red and cracked skin"
+      ],
+      "responses": [
+        "You might be suffering from allergies. Avoiding known allergens, taking antihistamines, and consulting with an allergist can help manage symptoms. It's important to identify what triggers your allergies."
+      ]
+    },
+    {
+      "tag": "alcohol_related_liver_disease",
+      "patterns": [
+        "abdominal pain",
+        "loss of appetite",
+        "fatigue",
+        "feeling sick",
+        "diarrhoea",
+        "feeling generally unwell",
+        "yellowing of the skin and whites of the eyes (jaundice)",
+        "swelling in the legs, ankles and feet, due to a build-up of fluid",
+        "swelling in your abdomen, due to a build-up of fluid known as ascites",
+        "a high temperature (fever) and shivering attacks",
+        "very itchy skin",
+        "hair loss",
+        "unusually curved fingertips and nails (clubbed fingers)",
+        "blotchy red palms",
+        "significant weight loss",
+        "weakness and muscle wasting",
+        "confusion and memory problems, trouble sleeping (insomnia) and changes in your personality due to a build-up of toxins in the brain",
+        "vomiting blood and black, tarry stools due to internal bleeding",
+        "a tendency to bleed and bruise more easily, such as frequent nosebleeds and bleeding gums",
+        "increased sensitivity to alcohol and drugs"
+      ],
+      "responses": [
+        "You might be suffering from alcohol-related liver disease. It's essential to seek medical advice to assess liver function and receive proper treatment. Reducing or stopping alcohol consumption is critical for recovery."
+      ]
+    },
+    {
+      "tag": "bladder_cancer",
+      "patterns": [
+        "a need to urinate on a more frequent basis",
+        "sudden urges to urinate",
+        "a burning sensation when passing urine"
+      ],
+      "responses": [
+        "You might be experiencing symptoms of bladder cancer. Please consult a healthcare professional for a thorough examination and appropriate tests to determine the cause and next steps."
+      ]
+    },
+    {
+      "tag": "dehydration",
+      "patterns": [
+        "dizziness",
+        "light headedness",
+        "headache",
+        "tiredness",
+        "dry mouth",
+        "dry lips",
+        "dry eyes",
+        "passing small amounts of urine infrequently"
+      ],
+      "responses": [
+        "You might be suffering from dehydration. It's important to drink plenty of fluids and seek medical attention if symptoms are severe or persistent."
+      ]
+    },
+    {
+      "tag": "diabetic_retinopathy",
+      "patterns": [
+        "gradually worsening vision",
+        "sudden vision loss",
+        "shapes floating in field of vision (floaters)",
+        "blurred vision",
+        "patchy vision",
+        "eye pain or redness"
+      ],
+      "responses": [
+        "You might be suffering from diabetic retinopathy, a complication of diabetes. Regular eye examinations and controlling blood sugar levels are important for managing this condition. Please consult an eye specialist."
+      ]
+    },
+    {
+      "tag": "type_2_diabetes",
+      "patterns": [
+        "urinating more often than usual, particularly at night",
+        "feeling very thirsty",
+        "feeling very tired",
+        "unexplained weight loss",
+        "itchiness around the genital area",
+        "cuts or wounds that heal slowly",
+        "blurred vision"
+      ],
+      "responses": [
+        "You might be suffering from type 2 diabetes. It's important to get your blood sugar levels checked and consult a healthcare provider for diagnosis and management of the condition."
+      ]
+    },
+    {
+      "tag": "type_1_diabetes",
+      "patterns": [
+        "feeling very thirsty",
+        "urinating more frequently than usual",
+        "urinating particularly at night",
+        "feeling very tired",
+        "weight loss",
+        "loss of muscle bulk",
+        "itchiness around the genital area",
+        "regular bouts of thrush",
+        "blurred vision",
+        "the lens of eye changing shape"
+      ],
+      "responses": [
+        "You might be suffering from type 1 diabetes. Please see a healthcare provider for a proper diagnosis and to discuss treatment options, including insulin therapy."
+      ]
+    },
+    {
+      "tag": "hypoglycaemia",
+      "patterns": [
+        "feeling shaky and irritable",
+        "sweating",
+        "tingling lips",
+        "feeling weak",
+        "feeling confused",
+        "hunger",
+        "nausea",
+        "feeling sick"
+      ],
+      "responses": [
+        "You might be suffering from hypoglycaemia (low blood glucose). It's important to eat or drink something sugary immediately and consult a healthcare provider to discuss how to manage and prevent these episodes."
+      ]
+    },
+    {
+      "tag": "hyperglycaemia",
+      "patterns": [
+        "extreme thirst",
+        "a dry mouth",
+        "blurred vision",
+        "drowsiness",
+        "need to pass urine frequently"
+      ],
+      "responses": [
+        "You might be suffering from hyperglycaemia (high blood glucose). It's important to monitor your blood sugar levels and consult a healthcare provider for advice on managing your condition."
+      ]
+    },
+    {
+      "tag": "insomnia",
+      "patterns": [
+        "I can't sleep",
+        "Having trouble sleeping",
+        "Insomnia",
+        "Can't fall asleep",
+        "Waking up in the middle of the night",
+        "Sleep problems",
+        "I haven't been able to sleep"
+      ],
+      "responses": [
+        "You might be experiencing insomnia. It's important to maintain a regular sleep schedule, avoid caffeine and electronics before bed, and create a relaxing bedtime routine. If the problem persists, consider consulting a healthcare professional."
+      ]
+    },
+    {
+      "tag": "migraine",
+      "patterns": [
+        "Severe headache",
+        "Migraine",
+        "Throbbing pain in my head",
+        "Sensitivity to light",
+        "Nausea with headache",
+        "Intense headache"
+      ],
+      "responses": [
+        "You might be suffering from a migraine. Migraines can be debilitating and may require specific medications to treat. Try resting in a dark, quiet room and using over-the-counter pain relievers. If migraines are frequent, consult a healthcare provider."
+      ]
+    },
+    {
+      "tag": "back_pain",
+      "patterns": [
+        "Lower back pain",
+        "Back hurts",
+        "Pain in my back",
+        "Stiff back",
+        "Ache in my back",
+        "Sharp pain in back",
+        "Back pain"
+      ],
+      "responses": [
+        "You might be experiencing back pain. It's important to maintain good posture, avoid lifting heavy objects improperly, and stay active. Over-the-counter pain relievers and stretching exercises may help. If pain persists, consult a healthcare provider."
+      ]
+    },
+    {
+      "tag": "seasonal_allergies",
+      "patterns": [
+        "Itchy eyes",
+        "Runny nose",
+        "Seasonal allergies",
+        "Sneezing a lot",
+        "Hay fever",
+        "Allergic to pollen"
+      ],
+      "responses": [
+        "You might be suffering from seasonal allergies. Try to stay indoors on high pollen days, keep windows closed, and use air purifiers. Over-the-counter antihistamines and nasal sprays can also help. Consult a healthcare provider if symptoms are severe."
+      ]
+    },
+    {
+      "tag": "skin_rash",
+      "patterns": [
+        "Itchy rash",
+        "Skin irritation",
+        "Red spots on skin",
+        "Rash on my body",
+        "Skin rash",
+        "Bumpy skin"
+      ],
+      "responses": [
+        "You might be experiencing a skin rash. It's important to avoid scratching, apply soothing lotions, and identify any potential allergens. Over-the-counter hydrocortisone creams can help. If the rash persists or is severe, consult a healthcare provider."
+      ]
+    },
+    {
+      "tag": "heartburn",
+      "patterns": [
+        "Burning sensation in chest",
+        "Heartburn",
+        "Acid reflux",
+        "Chest pain after eating",
+        "Indigestion",
+        "Stomach acid in throat"
+      ],
+      "responses": [
+        "You might be experiencing heartburn. Try eating smaller meals, avoiding spicy and fatty foods, and not lying down immediately after eating. Over-the-counter antacids can help. If symptoms persist, consult a healthcare provider."
+      ]
+    },
+    {
+      "tag": "uti",
+      "patterns": [
+        "Painful urination",
+        "Burning sensation when peeing",
+        "Frequent urination",
+        "UTI",
+        "Urinary tract infection",
+        "Cloudy urine",
+        "Blood in urine"
+      ],
+      "responses": [
+        "You might be suffering from a urinary tract infection (UTI). Drink plenty of water, avoid irritating substances like caffeine and alcohol, and consider over-the-counter medications. It's important to see a healthcare provider for proper diagnosis and treatment."
+      ]
+    },
+    {
+      "tag": "high_blood_pressure",
+      "patterns": [
+        "High blood pressure",
+        "Hypertension",
+        "Headache with high pressure",
+        "Dizziness and high pressure",
+        "Blurred vision and high pressure",
+        "Blood pressure is high"
+      ],
+      "responses": [
+        "You might be suffering from high blood pressure. It's important to maintain a healthy diet, exercise regularly, reduce salt intake, and manage stress. If you have persistent high blood pressure, consult a healthcare provider for appropriate medication and management."
+      ]
+    },
+    {
+      "tag": "low_blood_pressure",
+      "patterns": [
+        "Low blood pressure",
+        "Hypotension",
+        "Dizziness with low pressure",
+        "Fainting and low pressure",
+        "Blurred vision and low pressure",
+        "Blood pressure is low"
+      ],
+      "responses": [
+        "You might be suffering from low blood pressure. It's important to stay hydrated, eat small and frequent meals, and avoid standing up too quickly. If you experience frequent episodes of low blood pressure, consult a healthcare provider."
+      ]
+    },
+    {
+      "tag": "stress",
+      "patterns": [
+        "Feeling stressed",
+        "Under a lot of stress",
+        "Stress",
+        "Overwhelmed",
+        "Anxious",
+        "Stressed out",
+        "Can't handle the stress"
+      ],
+      "responses": [
+        "You might be experiencing stress. It's important to practice relaxation techniques such as deep breathing, meditation, and exercise. Make sure to take breaks and talk to someone you trust. If stress is affecting your daily life, consider consulting a mental health professional."
+      ]
+    },
+    {
+      "tag": "fatigue",
+      "patterns": [
+        "Feeling tired all the time",
+        "Always tired",
+        "Fatigue",
+        "Exhausted",
+        "Can't keep my eyes open",
+        "Low energy",
+        "Constantly fatigued"
+      ],
+      "responses": [
+        "You might be experiencing fatigue. Ensure you are getting enough sleep, eating a balanced diet, and staying hydrated. Regular physical activity can also help boost energy levels. If fatigue persists, consult a healthcare provider to rule out any underlying conditions."
+      ]
+    },
+    {
+      "tag": "compliments",
+      "patterns": [
+        "You are smart",
+        "You are helpful",
+        "I appreciate your help",
+        "You are amazing",
+        "Thank you for your help",
+        "You're the best"
+      ],
+      "responses": [
+        "Thank you! I'm here to help you as much as I can.",
+        "I'm glad I could assist you!",
+        "Your kind words mean a lot. How else can I help you today?",
+        "I'm happy to be of service. What else can I do for you?"
+      ]
+    },
+    {
+      "tag": "motivation",
+      "patterns": [
+        "I need motivation",
+        "Can you motivate me?",
+        "I'm feeling down",
+        "I need some encouragement",
+        "Help me feel better"
+      ],
+      "responses": [
+        "Believe in yourself! Every day is a new opportunity.",
+        "You are capable of amazing things!",
+        "Keep pushing forward, you got this!",
+        "Every small step counts. Keep going!"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "What's the weather like?",
+        "Is it going to rain today?",
+        "How's the weather?",
+        "Weather forecast",
+        "Tell me the weather"
+      ],
+      "responses": [
+        "I'm not equipped to provide real-time weather updates, but you can check a weather app or website for the latest forecast.",
+        "Weather information is best obtained from a reliable weather service or app.",
+        "I recommend checking the latest weather update on a trusted website or app for accurate information."
+      ]
+    },
+    {
+      "tag": "advice",
+      "patterns": [
+        "I need some advice",
+        "Can you give me advice?",
+        "What should I do?",
+        "Help me with advice",
+        "I need your opinion"
+      ],
+      "responses": [
+        "Sure, I'm here to help. What do you need advice on?",
+        "I'd be happy to offer some advice. Please tell me more about your situation.",
+        "Let's see how I can help. What's on your mind?",
+        "I'm here to help with any advice you need. What's the issue?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "See you later",
+        "Talk to you later",
+        "Catch you later",
+        "I have to go",
+        "I'm leaving now"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "Bye! Take care!",
+        "See you later! If you need anything, just ask!",
+        "Talk to you later! I'm here whenever you need me.",
+        "Catch you later! Stay safe!",
+        "I understand. Have a good one!",
+        "I'm here whenever you need me. Take care!"
+      ]
+    },
+    {
+      "tag": "thank_you",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "I appreciate it",
+        "Thanks a lot",
+        "Thank you very much",
+        "Thank you for your help",
+        "I appreciate your help"
+      ],
+      "responses": [
+        "You're welcome! Happy to help.",
+        "No problem! If you need anything else, just let me know.",
+        "You're welcome! Anytime!",
+        "I'm glad I could help!",
+        "You're welcome! Have a great day!",
+        "It's my pleasure to help you.",
+        "You're welcome! Take care!"
+      ]
+    },
+    {
+      "tag": "take_care",
+      "patterns": [
+        "Take care",
+        "Be safe",
+        "Stay safe",
+        "Take it easy",
+        "Look after yourself"
+      ],
+      "responses": [
+        "You too! Take care!",
+        "Stay safe and take care!",
+        "Be safe! I'm here if you need anything.",
+        "Take it easy! Have a good day!",
+        "Look after yourself! I'm here whenever you need me."
+      ]
+    },
+    {
+      "tag": "have_a_nice_day",
+      "patterns": [
+        "Have a nice day",
+        "Have a good day",
+        "Enjoy your day",
+        "Have a great day",
+        "Wishing you a good day"
+      ],
+      "responses": [
+        "Thank you! You too!",
+        "I hope you have a wonderful day!",
+        "Enjoy your day! I'm here if you need anything.",
+        "Have a great day! Take care!",
+        "Wishing you a fantastic day!"
+      ]
+    },
+    {
+      "tag": "come_back_soon",
+      "patterns": [
+        "I'll be back",
+        "Talk to you soon",
+        "See you soon",
+        "I'll return",
+        "I'll chat with you later"
+      ],
+      "responses": [
+        "I'll be here when you return!",
+        "Talk to you soon! Take care!",
+        "See you soon! I'll be here.",
+        "I'll be ready when you come back!",
+        "I'll be here if you need me. Talk to you later!"
+      ]
+    },
+    {
+      "tag": "end_of_assistance",
+      "patterns": [
+        "That's all",
+        "I don't need anything else",
+        "That's it for now",
+        "I'm done",
+        "No more questions",
+        "I'm good for now"
+      ],
+      "responses": [
+        "Got it! If you think of anything else, I'm here.",
+        "Alright, have a great day!",
+        "I'm glad I could help. Take care!",
+        "Okay, have a nice day!",
+        "If you need anything else, just let me know. Take care!"
+      ]
+    },
+    {
+      "tag": "acknowledgment",
+      "patterns": [
+        "Got it",
+        "Understood",
+        "I see",
+        "Okay",
+        "Alright",
+        "Sure",
+        "I understand"
+      ],
+      "responses": [
+        "Great!",
+        "Got it!",
+        "Understood.",
+        "Okay!",
+        "Alright!",
+        "Sure thing!",
+        "I understand."
+      ]
+    },
+    {
+      "tag": "clarification_request",
+      "patterns": [
+        "What do you mean",
+        "Can you clarify",
+        "Please explain",
+        "I don't understand",
+        "Can you elaborate",
+        "What does that mean",
+        "Can you explain that further"
+      ],
+      "responses": [
+        "Sure, let me explain that further.",
+        "I can clarify that for you.",
+        "Here's a bit more detail.",
+        "Let me elaborate on that.",
+        "I understand, here's what I mean..."
+      ]
+    },
+    {
+      "tag": "apology",
+      "patterns": [
+        "I'm sorry",
+        "My apologies",
+        "Sorry",
+        "I apologize",
+        "Forgive me"
+      ],
+      "responses": [
+        "No worries! How can I assist you further?",
+        "It's okay! Let's get back to your question.",
+        "No problem at all. How can I help?",
+        "Apology accepted! What else can I do for you?",
+        "It's fine! Let me know how I can assist."
+      ]
+    },
+    {
+      "tag": "reassurance",
+      "patterns": [
+        "I'm worried",
+        "I'm scared",
+        "I'm nervous",
+        "I'm unsure",
+        "I need reassurance"
+      ],
+      "responses": [
+        "It's okay to feel that way. I'm here to help you.",
+        "Don't worry, I'm here to assist you with any concerns.",
+        "It's normal to feel nervous. How can I help?",
+        "You're not alone in this. Let me know how I can assist.",
+        "I'm here for you. What can I do to help?"
+      ]
+    },
+    {
+      "tag": "confirmation",
+      "patterns": [
+        "Is that correct",
+        "Am I right",
+        "Can you confirm",
+        "Is this true",
+        "Can you verify"
+      ],
+      "responses": [
+        "Yes, that's correct.",
+        "You are right.",
+        "I can confirm that for you.",
+        "Yes, that's true.",
+        "I can verify that for you."
+      ]
+    },
+    {
+      "tag": "symptom_inquiry",
+      "patterns": [
+        "I don't feel well",
+        "sick",
+        "i feel sick",
+        "I'm feeling unwell",
+        "I'm feeling sick",
+        "I feel sick",
+        "I think I'm sick",
+        "I'm not feeling good",
+        "I'm not feeling well",
+        "I feel terrible",
+        "I don't feel good",
+        "I'm feeling bad",
+        "I'm feeling awful"
+      ],
+      "responses": [
+        "I'm sorry to hear that you're not feeling well. Can you describe your symptoms?",
+        "I hope you feel better soon. What symptoms are you experiencing?",
+        "It's important to take care of your health. What are your symptoms?",
+        "I'm here to help. Can you tell me more about how you're feeling?",
+        "I'm sorry you're feeling this way. What symptoms do you have?"
+      ]
+    }
+  ]
+}
