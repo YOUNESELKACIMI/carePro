@@ -1,5 +1,37 @@
-# carePro project
-A PROFESSIONAL HEALTHCARE ASSISTANT AT YOUR SERVICE
+## carePro project
+
+# A PROFESSIONAL HEALTHCARE ASSISTANT AT YOUR SERVICE
+
 ![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/15a7ee5b-c1b7-4118-b697-836ae139e57a)
-![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/994a15c6-3100-42f8-8738-c95a10a171aa)
-![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/bcac1088-8349-4f41-8407-f04d2634e4ac)
+
+## Project Architecture
+
+![architecture](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/86e92e5a-3f32-4ed2-b7b0-1f230c68a377)
+
+
+## Prerequisites
+
+- Node.js and Docker
+
+## Running the Application
+
+- set up a `.env` file for the main app's api:
+  
+![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/f1194686-6529-4796-9d49-d6264695fd58)
+  
+- set up a `.env` file for chat api:
+  
+![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/da89bfda-2005-4645-9b28-e5b880481108)
+
+- set up a `.env` file for the frontend:
+
+![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/41d9ce27-24e8-44e4-be34-46f3f696675d)  
+
+- `cd api` and run `docker compose up -d`
+- `cd chatApi` and run `docker compose up -d`
+
+# Frontend setup
+
+- `cd client`
+- install dependencies `npm install`
+- run the app `npm run dev`
