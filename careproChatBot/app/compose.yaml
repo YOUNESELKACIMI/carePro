@@ -9,7 +9,7 @@ services:
     networks:
       - CAREPRO_NETWORK
     volumes:
-      - .:/app  # Bind mount the current directory into the container's /app directory
+      - .:/app  
 networks:
   CAREPRO_NETWORK:
     external: true
