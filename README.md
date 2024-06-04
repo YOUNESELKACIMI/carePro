@@ -6,32 +6,97 @@
 
 ## Project Architecture
 
-![architecture](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/86e92e5a-3f32-4ed2-b7b0-1f230c68a377)
+#### Using OpenAI
+<img src="./assets/architecture1.png">
 
+#### Using our own chatbot
+<img src="./assets/architecture2.jfif">
 
-## Prerequisites
+#### Database
 
-- Node.js and Docker
+<img src="./assets/db_arch.png">
 
-## Running the Application
+## Prerequisites 
+- Docker
+- Node
 
-- set up a `.env` file for the main app's api:
-  
-![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/f1194686-6529-4796-9d49-d6264695fd58)
-  
-- set up a `.env` file for chat api:
-  
-![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/da89bfda-2005-4645-9b28-e5b880481108)
+## Running the application
 
-- set up a `.env` file for the frontend:
+#### step 1 - main api
 
-![image](https://github.com/YOUNESELKACIMI/carePro/assets/119015253/41d9ce27-24e8-44e4-be34-46f3f696675d)  
+- Installing dependencies
+ 
+```bash
+cd api
+npm install
+```
 
-- `cd api` and run `docker compose up -d`
-- `cd chatApi` and run `docker compose up -d`
+- Next, you need to set up `.env` file
+```python
+SECRET="" # for JWT (Json web token)
+# For database
+DATABASE_URL=""
+DB_USER="postgres"
+POSTGRES_PASSWORD=""
+DB_HOST="localhost"
+DB_PORT="5432"
+DB_NAME="carepro"
+# node server port
+PORT="3000"
+```
 
-# Frontend setup
+- Finally, build the docker image and run the container.
+```bash
+docker compose up --build
+```
 
-- `cd client`
-- install dependencies `npm install`
-- run the app `npm run dev`
+### step 2 - chatbot
+
+Here you have a choice between using OpenAI Api, or a custom chatbot.
+
+##### OpenAI API
+
+```bash
+cd chatApi
+```
+
+- set up `.env`
+
+```python
+OPENAI_API_KEY = ""
+```
+
+- Build the image and run the container
+
+```bash
+docker compose up --build
+```
+
+#### Using our custom chatbot
+
+```bash
+cd careproChatBot/app
+docker compose up --build # this may take a while
+```
+```bash
+cd ../../chatApi2
+docker compose up --build
+```
+
+## step 3 - front end
+
+- Install dependencies
+```bash
+cd client
+npm install
+```
+
+- Run the server
+
+```bash
+npm run dev
+```
+
+Project made with love.
+
+For the chatbot implementation details, refer to `./how` folder
