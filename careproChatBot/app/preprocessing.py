@@ -1,5 +1,10 @@
 import json
+import nltk
 from nltk_utils import tokenize, stem
+import nltk
+from nltk.corpus import stopwords
+
+nltk.download('stopwords')
 
 def preprocess_data(json_file):
     with open(json_file, 'r') as f:
@@ -8,7 +13,17 @@ def preprocess_data(json_file):
     all_words = []
     tags = []
     xy = []
-    ignore_words = ['?', '.', '!',',']
+    #stop words
+    ignore_words = [
+    'i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves',
+    'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their',
+    'theirs', 'themselves', 'this', 'that', 'these', 'those',
+    'a', 'an', 'the',
+    '?', '.', '!', ',', ':', ';', '(', ')', '[', ']', '{', '}', '``', '’', '“', '”', '--', '-', '...'
+]
+
+    
+    # print(ignore_words)
 
     # Loop through each sentence in our intents patterns
     for intent in intents['intents']:

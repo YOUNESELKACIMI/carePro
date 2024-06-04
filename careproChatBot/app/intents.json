@@ -259,7 +259,9 @@
         "Can't fall asleep",
         "Waking up in the middle of the night",
         "Sleep problems",
-        "I haven't been able to sleep"
+        "I haven't been able to sleep",
+        "sleepy",
+        "I feel sleepy"
       ],
       "responses": [
         "You might be experiencing insomnia. It's important to maintain a regular sleep schedule, avoid caffeine and electronics before bed, and create a relaxing bedtime routine. If the problem persists, consider consulting a healthcare professional."
@@ -596,13 +598,7 @@
         "I understand"
       ],
       "responses": [
-        "Great!",
-        "Got it!",
-        "Understood.",
-        "Okay!",
-        "Alright!",
-        "Sure thing!",
-        "I understand."
+          "Glad you got it!"
       ]
     },
     {

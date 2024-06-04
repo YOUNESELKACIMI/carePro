@@ -1,0 +1,11 @@
+Hi!
+Who are you?
+How is the weather today?
+I don't feel well
+I have a light headache and feel tired
+I also feel sleepy all day long
+Going to a doctor seems a good idea, can you confirm?
+I also experience sneezing a lot and have a runny nose
+Got it.
+That's all for now, thanks
+Goodbye!
