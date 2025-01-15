@@ -1,8 +1,8 @@
-version: '3.8'
+version: "3.8"
 
 services:
   postgresdb:
-    image: postgres
+    image: postgres:16
     restart: unless-stopped
     ports:
       - "5432:5432"
@@ -31,7 +31,8 @@ services:
     depends_on:
       - postgresdb
     restart: unless-stopped
-    build: .
+    build:
+      context: .
     ports:
       - "3000:3000"
     env_file: ./.env
@@ -44,6 +45,9 @@ services:
       - PORT=$PORT
     stdin_open: true
     tty: true
+    volumes:
+      - ./:/app # Mount your local src folder to /app inside the container
+    command: ["npm", "run", "dev"] # Use a dev script like nodemon for hot reloading
     networks:
       - CAREPRO_NETWORK
 
@@ -51,5 +55,5 @@ networks:
   CAREPRO_NETWORK:
     external: true
 
-volumes: 
+volumes:
   db:

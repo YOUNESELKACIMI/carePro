@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: (
       <AuthorizationProvider>
         <App />
-      </AuthorizationProvider>
+       </AuthorizationProvider>
     ),
   },
   {

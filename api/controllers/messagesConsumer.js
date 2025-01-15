@@ -17,7 +17,7 @@ const consumeMessages = async () => {
         await ChatHistory.create({
           userId: content.id,
           role: content.role,
-          content: content.content,
+          content: content.parts
         });
         channel.ack(message);
       } catch (error) {
