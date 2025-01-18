@@ -30,6 +30,7 @@ services:
     container_name: main_api
     depends_on:
       - postgresdb
+      - rabbitmq
     restart: unless-stopped
     build:
       context: .
