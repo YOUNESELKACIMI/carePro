@@ -39,6 +39,7 @@ const MapWithDoctors = ({ coordinates }) => {
       position: coordinates,
       map: newMap,
       title: "You are here!",
+      icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
         });
 
     newMap.setCenter(coordinates);

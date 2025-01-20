@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { IcurrentUser, Iparam } from '../types/types';
 import useAuth from '../hooks/useContext';
 import Navbar from '../components/Navbar';
+import logo from './header.jpeg'
 
 const Home = () => {
 
@@ -13,7 +14,7 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       <header className="bg-gradient-to-r from-blue-600 to-blue-400 text-white">
         <Navbar/>        
-        <div className="container mx-auto px-6 py-24">
+        <div className="container mx-auto px-6 py-24 flex">
           <div className="max-w-2xl">
             <h1 className="text-5xl font-bold mb-6">
               Find and Connect with Healthcare Professionals Instantly
@@ -27,6 +28,10 @@ const Home = () => {
               <ChevronRight className="ml-2" />
             </button>
           </div>
+               {    // <div>
+                     //   <img src={logo}/>
+                    //</div>
+                    }
         </div>
       </header>
 
