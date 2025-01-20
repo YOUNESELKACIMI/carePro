@@ -28,7 +28,7 @@
 }
 
 .isactive {
-  @apply bg-palette3;
+  @apply bg-blue-600;
 }
 
 

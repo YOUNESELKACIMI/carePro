@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+// import App from "./App.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./views/Login.tsx";
@@ -9,13 +9,22 @@ import Register from "./views/Register.tsx";
 import "react-toastify/dist/ReactToastify.css";
 import Chat from "./views/Chat.tsx";
 import Saved from "./views/Saved.tsx";
+import Home from "./views/Home.tsx";
+import App from "./App.tsx";
 
 const router = createBrowserRouter([
+
   {
     path: "/",
     element: (
+    <Home/>
+    ),
+},
+  {
+    path: "/map",
+    element: (
       <AuthorizationProvider>
-        <App />
+        <App/>
        </AuthorizationProvider>
     ),
   },

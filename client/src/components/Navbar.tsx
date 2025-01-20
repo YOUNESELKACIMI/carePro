@@ -1,36 +1,29 @@
-import useAuth from "../hooks/useContext";
-import { IcurrentUser } from "../types/types";
-
+import { IcurrentUser, Iparam } from '../types/types'
+import useAuth from '../hooks/useContext'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const { logout } = useAuth();
-  const {currentUser } = useAuth();
-
-  const toggleSidebar = () => {
-    const sidebar = document.querySelector(".sidebar");
-    if (sidebar) {
-      sidebar.classList.toggle("closed");
-    }
-  };
-
+    const {currentUser} : Iparam = useAuth();
+    const {logout} = useAuth();
   return (
-    <div className="w-full border-b flex gap-2 bg-palette2  items-center p-2 pl-8 navbar z-50 ">
-      <span
-        onClick={toggleSidebar}
-        className="material-symbols-outlined pr-4 cursor-pointer text-white "
-      >
-        menu
-      </span>
-      <div className="w-full flex justify-end pr-8">
-        <p
-          className="small cursor-pointer p-2 bg-palette3 hover:bg-palette1 rounded text-white"
-          onClick={logout}
-        >
-          Logout
-        </p>
-      </div>
-    </div>
-  );
-};
+    <nav className="container mx-auto px-6 py-4 flex justify-between items-center bg-gradient-to-r from-blue-600 to-blue-400 text-white">
+          <div className="text-2xl font-bold">
+                <Link to="/">CAREPRO</Link>
+            </div>
+          <div className="space-x-4 flex items-center">
+            {!currentUser && 
+                (<Link to={`/login`} className='px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition'>Get Started</Link>)
+            }
+            {currentUser && 
+                <div className='flex items-center gap-4'>
+                    <h1>Welcome back, {(currentUser as IcurrentUser).name}</h1>
+                    <button onClick={logout} className='px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition'>Logout</button>
+                </div>
+            }
+          </div>
+        </nav>
 
-export default Navbar;
+  )
+}
+
+export default Navbar

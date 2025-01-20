@@ -21,7 +21,7 @@ const Sidebar = ({ activePage }) => {
             activePage == "map" ? "isactive" : ""
           }`}
         >
-          <Link to="/">Map</Link>
+          <Link to="/map">Map</Link>
         </p>
         <p
           className={`hover:bg-palette2 p-4 pl-10 ${

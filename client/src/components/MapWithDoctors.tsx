@@ -35,6 +35,14 @@ const MapWithDoctors = ({ coordinates }) => {
       center: coordinates,
       zoom: 16,
     });
+    new window.google.maps.Marker({
+      position: coordinates,
+      map: newMap,
+      title: "You are here!",
+        });
+
+    newMap.setCenter(coordinates);
+
     setMap(newMap);
     setPlacesService(new window.google.maps.places.PlacesService(newMap));
   };

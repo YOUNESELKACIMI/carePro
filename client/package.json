@@ -14,6 +14,7 @@
     "client": "file:",
     "google-map-react": "^2.2.1",
     "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.473.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",

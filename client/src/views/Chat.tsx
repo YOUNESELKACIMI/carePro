@@ -23,8 +23,9 @@ const Chat = () => {
       setMessages(user.chatHistories);
     };
     fetchUser();
-  }, []);
 
+  }, []);
+    
   const handleChat = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const userMessage = {
@@ -49,11 +50,11 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex">
-      <Sidebar activePage={"chat"} />
+    <div className="flex" >
+            <Sidebar activePage={"chat"}/>
       <div className="flex flex-col h-screen w-full">
-        <Navbar />
-        <div className="messages flex-1 p-4 overflow-y-auto">
+                <Navbar/>
+        <div className="main-chat-div messages flex-1 p-4 overflow-y-auto">
           {messages && messages.length === 0 && (
             <div className="text-center text-4xl text-palette3 mt-32">How can I help you today?</div>
           )}
@@ -68,7 +69,7 @@ const Chat = () => {
                 <div
                   className={`${
                     message.role === "user"
-                      ? "bg-palette3 text-white"
+                      ? "bg-blue-600 text-white"
                       : "bg-gray-200"
                   } rounded-lg p-2 max-w-xs break-words mb-2`}
                 >
